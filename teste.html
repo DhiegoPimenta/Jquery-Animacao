@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+<script src="jquery.min.js"></script>
+<style>
+
+.bar {
+  background-image: url('http://hautcomunicacaovisual.com.br/wp-content/uploads/2018/02/ffff.png');
+  width: 0;
+  height: 800px;
+  transition: 5s width;
+  transition-delay:0.2s;
+  background-repeat: no-repeat;
+
+}
+
+.bar.open {
+  width: 100%;
+}
+
+.bar2 {
+  background-image: url('http://hautcomunicacaovisual.com.br/wp-content/uploads/2018/02/img2.png');
+  width: 0;
+  height: 800px;
+  transition: 5s width;
+  transition-delay:0.2s;
+  background-repeat: no-repeat;
+  background-position: right top;
+ position:absolute;
+  right:0; 
+
+}
+
+.bar2.open {
+  width: 100%;
+}
+
+
+.bar3 {
+  background-image: url('http://hautcomunicacaovisual.com.br/wp-content/uploads/2018/02/e3.png');
+  width: 0;
+  height: 800px;
+  transition: 5s width;
+  transition-delay:0.2s;
+  background-repeat: no-repeat;
+
+}
+
+.bar3.open {
+  width: 100%;
+}
+
+
+
+html {
+    background: #040506;
+}
+
+.espaco.open{
+    height:600px;
+}
+
+</style>
+<body>
+
+<div class="bar"> </div><br/>
+<div class="bar2"> </div>
+<div class="espaco"> </div>
+<div class="bar3"> </div>
+
+
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+    $('.bar').addClass('open');
+    setTimeout(function(){
+  $('.bar2').addClass("open");
+}, 2500);
+    setTimeout(function(){
+  $('.espaco').addClass("open");
+}, 4500);
+    setTimeout(function(){
+  $('.bar3').addClass("open");
+}, 5000);
+});
+
+$(document).ready(function(){
+     setTimeout(function(){
+    $('html, body').animate({ 'scrollTop' : $(document).height() }, 'slow');
+}, 2800);
+  
+});
+$(document).ready(function(){
+     setTimeout(function(){
+    $('html, body').animate({ 'scrollTop' : $(document).height() }, 'slow');
+}, 5200);
+  
+});
+
+$(document).ready(function(){
+     setTimeout(function(){
+    $('html, body').animate({ 'scrollTop' :0}, 'slow');
+}, 8000);
+  
+});
+
+
+
+
+  
+</script>
+
